@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Basic styling to make the form look tidy */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            
+        }
+        .container {
+            width: 300px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            background-color: #eee; /* Light gray to show it's locked */
+            border: 1px solid #999;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <label>First Name</label>
+        <input type="text" id="box1" readonly>
+
+        <label>Last Name</label>
+        <input type="text" id="box2" readonly>
+
+        <button onclick="fillForm()">Click to Enter Names</button>
+    </div>
+
+    <script>
+        function fillForm() {
+            // Ask for names using prompt boxes
+            var first = prompt("Enter First Name:");
+            var last = prompt("Enter Last Name:");
+
+            // Put the values into the boxes
+            if (first != null) document.getElementById("box1").value = first;
+            if (last != null) document.getElementById("box2").value = last;
+        }
+    </script>
+
+</body>
+</html>
